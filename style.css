@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'calculator';
+    src: url('digital-7.ttf');
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #cfebfd;
+	/*background: url(gradient.jpg);
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+	outline: none;
+}
+
+.container{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.calci{
+	background-color: #6b6b6b;
+	border: solid #bebebe;
+	border-width: thick;
+	padding: 15px;
+	border-radius: 30px;
+	box-shadow: inset 5px 5px 12px #6b6b6b,
+					  5px 5px 12px rgba(0,0,0,0.16);
+	display: grid;
+	grid-template-columns: repeat(4,69px);
+}
+
+.calci>input{
+	grid-column: span 4;
+	height: 60px;
+	width: 260px;
+	background-color: #7eff82;
+	box-shadow: inset -5px -5px 12px #7eff82,
+					  5px 5px 12px rgba(0,0,0,0.16);
+	border: none;
+	border-radius: 30px;
+	margin: auto;
+	color: #808080;
+	font-family: 'calculator';
+	font-size: 50px;
+	text-align: end;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+
+
+.calci>button{
+	height: 50px;
+	width: 50px;
+	background-color: #f4f4f4;
+	box-shadow: inset -5px -5px 12px #fff,
+					  5px 5px 12px rgba(0,0,0,0.16);
+	border:none;
+	border-radius: 50%;
+	margin: 5px;
+}
+
+
+.calci>button:hover{
+	background-color: #808080;
+	color: #fff;
+	box-shadow: inset -5px -5px 12px #808080,
+					  5px 5px 12px rgba(0,0,0,0.16);
+}
+
+.calci>.equal{
+	width: 120px;
+	border-radius: 30px;
+}
+

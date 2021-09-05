@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'> -->
+
+    <title>Calculator</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="calci">
+  
+        <input type="text" placeholder="0" id="output">
+        <button onclick="Clear()" class="ac">AC</button>
+        <button onclick="Delete()" class="del">&#8592;</button>
+        <button onclick="Display('%')">%</button>
+        <button onclick="Display('/')">/</button>
+        <button onclick="Display('7')">7</button>
+        <button onclick="Display('8')">8</button>
+        <button onclick="Display('9')">9</button>
+        <button onclick="Display('*')">*</button>
+        <button onclick="Display('4')">4</button>
+        <button onclick="Display('5')">5</button>
+        <button onclick="Display('6')">6</button>
+        <button onclick="Display('-')">-</button>
+        <button onclick="Display('1')">1</button>
+        <button onclick="Display('2')">2</button>
+        <button onclick="Display('3')">3</button>
+        <button onclick="Display('+')">+</button>
+        <button onclick="Display('.')">.</button>
+        <button onclick="Display('0')">0</button>
+        <button onclick="Calculate()" class="equal">=</button>
+      </div>
+    </div>
+
+    <script>
+      // Getting output screen
+      let outputDisplay = document.getElementById("output");
+
+      //Display function
+      function Display(x){
+        outputDisplay.value += x;
+      }
+
+      //Operations
+      function Calculate(){
+        try{
+          outputDisplay.value = eval(outputDisplay.value);
+        }
+        catch(err){
+          alert("Invalid operation!");
+        }
+      }
+
+      //All clear button
+      function Clear() {
+        outputDisplay.value = "";
+      }
+
+      //Delete button
+      function Delete(){
+        outputDisplay.value = outputDisplay.value.slice(0,-1)
+      }
+
+
+    </script>
+    
+  </body>
+</html>
